@@ -11,6 +11,7 @@ body {
 	margin-top:50px;
 	color:#0d1013;
 	margin-bottom:50px;
+	font-size:15px;
 }
 
 a {
@@ -29,6 +30,15 @@ hr.thick-divider {
 	border: 0;
 	margin-top:30px;
 	margin-bottom:30px;
+}
+
+hr.thin-divider {
+	color: #0d1013;
+	background-color: #626970;
+	height: 1px; 
+	border: 0;
+	margin-top:60px;
+	margin-bottom:60px;
 }
 
 .option-text {
@@ -109,4 +119,25 @@ h1 {
 	max-width: 100%; height: auto;
 	width:500px;
 	margin-bottom:30px;
+}
+
+/* BEERS */
+
+.beers-info-row {
+	margin-bottom:0px;
+}
+.beers-label img {
+	max-width: 100%; height: auto;
+}
+
+.beers-info-id {
+	padding-right:20px;
+}
+
+.beers-info tr td {
+	padding-bottom:20px;
+}
+
+.beers-info {
+	line-height:20px;
 }
