@@ -1,0 +1,112 @@
+/* GLOBAL STYLES */
+
+.column .content,.columns .content
+	 {
+	width:100%;
+
+}
+
+body {
+	font-family: 'Cardo', serif;
+	margin-top:50px;
+	color:#0d1013;
+	margin-bottom:50px;
+}
+
+a {
+	text-decoration: none;
+	color:#0d1013;
+}
+
+a:hover {
+	color:#1982ec;
+}
+
+hr.thick-divider {
+	color: #0d1013;
+	background-color: #0d1013;
+	height: 3px; 
+	border: 0;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+.option-text {
+	color:#1982ec;}
+
+/* HEADER */
+
+div.logo-area {
+	text-indent: -9999px;
+	background:url('bpb_logo.jpg');
+	background-size:contain;
+	width:200px;
+	height:200px;
+}
+
+nav {
+	font-family: 'Montserrat', sans-serif;
+	font-size:36px;
+	line-height:48px;
+	text-transform: uppercase;
+	letter-spacing: 6;
+	text-align: right;
+	position: relative;
+	height:200px;
+	width:100%
+}
+
+nav ul {
+	position:absolute;
+	bottom:0px;
+	right:0px;
+}
+
+.headline {
+	font-family: 'Montserrat', sans-serif;
+	font-size:36px;
+	margin-top:100px;
+	margin-bottom:130px;
+	text-align:center;
+}
+
+/* CONTENT */
+
+.offset-right {
+	text-align:right;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-size:30px;
+}
+
+.collaboration-table {
+	font-size:30px;
+	line-height:60px;
+	margin-bottom:130px;
+}
+
+.guidelines {
+	font-size:24px;
+	line-height:30px;
+	margin-bottom:130px;
+}
+
+.guidelines ul li {
+	margin-bottom:30px;
+}
+
+.guidelines ul li a  {
+	text-decoration: underline;
+}
+
+.previous-labels {
+	text-align: center;
+}
+.previous-labels img {
+	max-width: 100%; height: auto;
+	width:500px;
+	margin-bottom:30px;
+}
