@@ -4,7 +4,28 @@
     <link rel='stylesheet' type='text/css' href='concrete.css'>
     <link rel='stylesheet' type='text/css' href='styles.css'>
     <link href='http://fonts.googleapis.com/css?family=Cardo:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+	<link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	
   </head>
+
   <body>
     <div class='row'>
     
@@ -17,7 +38,7 @@
       		<ul>
       			<li><a href="about.html">BPB</a></li>
       			<li><a href="beers.html">Beers</a></li>
-      			<li><a href="#">Designers</a></li>
+      			<li><a href="#" class="disabled-link">Designers</a></li>
       			<li class='current'><a class='current' href="contribute.html">Contribute</a></li>
       		</ul>
       	</nav>
@@ -45,27 +66,24 @@
     </div><!-- /close row -->
     
     <div class="row">
-    	<div class="ten columns offset by-one beers-sorting-links">
-    		<a href="#" class="option-text">All</a> / <a href="#">Open</a> / <a href="#">In Progress</a>
+    	<div class="ten columns offset by-one beers-sorting-links" id="beers-sorting-links">
+    		<a href="#" class="current" id="allcat">All</a> / <a href="#" id="open" class="filter">Open</a> / <a href="#" id="in-progress" class="filter">In Progress</a>
     	</div><!-- /ten columns -->
     </div><!-- /row -->
     <div class="row"><div class="ten columns offset by-one"><hr class="thin-divider"></div></div>
         
     <!-- OPEN SINGLE BEER INFO -->
-    <div class="row beers-info-row">
-    	<div class="six columns offset by-one beers-label">
-    		<img src="label_open.jpg">
-    	</div><!-- /six columns -->
-    	<div class="four columns">
-<!--
-    		<p>Name: Great Lakes</p>
-    		<p>Type: American IPA</p>
-    		<p>ABV: 5.1%</p>
-    		<p>IBU: 31</p>
-    		<p>Hops: Challenge, Cascade</p>
-    		<p>Grain: Marris Otter, Vienna, Crystal 120L</p>
--->
-    		
+    
+    <div class="beer open">
+    
+	 <div class="row beers-label-row">
+	    	<div class="ten columns offset by-one beers-label">
+	    		<img src="label_open.jpg">
+	    	</div><!-- /ten columns -->
+	    </div><!-- /beers-label-row -->
+	 
+	 <div class="row beers-info-row">
+    	<div class="ten columns offset by-one">    		
     		<table class="beers-info">
     			<!--
 <tr>
@@ -106,26 +124,25 @@
     				<td class="option-text">Open</td>
     			</tr>
     		</table>
-    	</div><!-- /four columns -->
+    	</div><!-- /ten columns -->
     </div><!-- /row -->
     <div class="row"><div class="ten columns offset by-one"><hr class="thin-divider"></div></div>
+    
+    </div><!-- /beer -->
     <!-- CLOSE SINGLE BEER INFO -->
     
         <!-- OPEN SINGLE BEER INFO -->
-    <div class="row beers-info-row">
-    	<div class="six columns offset by-one beers-label">
-    		<img src="label_inprogress.jpg">
-    	</div><!-- /six columns -->
-    	<div class="four columns">
-<!--
-    		<p>Name: Great Lakes</p>
-    		<p>Type: American IPA</p>
-    		<p>ABV: 5.1%</p>
-    		<p>IBU: 31</p>
-    		<p>Hops: Challenge, Cascade</p>
-    		<p>Grain: Marris Otter, Vienna, Crystal 120L</p>
--->
-    		
+     <div class="beer in-progress">
+      
+	 <div class="row beers-label-row">
+	    	<div class="ten columns offset by-one beers-label">
+	    		<img src="label_inprogress.jpg">
+	    	</div><!-- /ten columns -->
+	    </div><!-- /beers-label-row -->
+	 
+	 <div class="row beers-info-row">
+    	<div class="ten columns offset by-one">
+    	    		
     		<table class="beers-info">
     			<!--
 <tr>
@@ -166,27 +183,26 @@
     				<td>Lucie Maslin - In Progress</td>
     			</tr>
     		</table>
-    	</div><!-- /four columns -->
+    	</div><!-- /ten columns -->
     </div><!-- /row -->
     <div class="row"><div class="ten columns offset by-one"><hr class="thin-divider"></div></div>
+    </div><!-- /beer -->
     <!-- CLOSE SINGLE BEER INFO -->
     
     
-     <!-- OPEN SINGLE BEER INFO -->
-    <div class="row beers-info-row">
-    	<div class="six columns offset by-one beers-label">
-    		<img src="label_open.jpg">
-    	</div><!-- /six columns -->
-    	<div class="four columns">
-<!--
-    		<p>Name: Great Lakes</p>
-    		<p>Type: American IPA</p>
-    		<p>ABV: 5.1%</p>
-    		<p>IBU: 31</p>
-    		<p>Hops: Challenge, Cascade</p>
-    		<p>Grain: Marris Otter, Vienna, Crystal 120L</p>
--->
-    		
+    <!-- OPEN SINGLE BEER INFO -->
+    
+     <div class="beer open">
+     
+	 <div class="row beers-label-row">
+	    	<div class="ten columns offset by-one beers-label">
+	    		<img src="label_open.jpg">
+	    	</div><!-- /ten columns -->
+	    </div><!-- /beers-label-row -->
+	 
+	 <div class="row beers-info-row">
+    	<div class="ten columns offset by-one">
+    	    		
     		<table class="beers-info">
     			<!--
 <tr>
@@ -227,27 +243,25 @@
     				<td class="option-text">Open</td>
     			</tr>
     		</table>
-    	</div><!-- /four columns -->
+    	</div><!-- /ten columns -->
     </div><!-- /row -->
     <div class="row"><div class="ten columns offset by-one"><hr class="thin-divider"></div></div>
+    </div><!-- /beer -->
     <!-- CLOSE SINGLE BEER INFO -->
 
         
          <!-- OPEN SINGLE BEER INFO -->
-    <div class="row beers-info-row">
-    	<div class="six columns offset by-one beers-label">
-    		<img src="label_inprogress.jpg">
-    	</div><!-- /six columns -->
-    	<div class="four columns">
-<!--
-    		<p>Name: Great Lakes</p>
-    		<p>Type: American IPA</p>
-    		<p>ABV: 5.1%</p>
-    		<p>IBU: 31</p>
-    		<p>Hops: Challenge, Cascade</p>
-    		<p>Grain: Marris Otter, Vienna, Crystal 120L</p>
--->
-    		
+      <div class="beer in-progress">
+      
+	 <div class="row beers-label-row">
+	    	<div class="ten columns offset by-one beers-label">
+	    		<img src="label_inprogress.jpg">
+	    	</div><!-- /ten columns -->
+	    </div><!-- /beers-label-row -->
+	 
+	 <div class="row beers-info-row">
+    	<div class="ten columns offset by-one">
+    	    		
     		<table class="beers-info">
     			<!--
 <tr>
@@ -288,26 +302,25 @@
     				<td>Dan Cooper - In Progress</td>
     			</tr>
     		</table>
-    	</div><!-- /four columns -->
+    	</div><!-- /ten columns -->
     </div><!-- /row -->
     <div class="row"><div class="ten columns offset by-one"><hr class="thin-divider"></div></div>
+    </div><!-- /beer -->
     <!-- CLOSE SINGLE BEER INFO -->
     
      <!-- OPEN SINGLE BEER INFO -->
-    <div class="row beers-info-row">
-    	<div class="six columns offset by-one beers-label">
-    		<img src="label_open.jpg">
-    	</div><!-- /six columns -->
-    	<div class="four columns">
-<!--
-    		<p>Name: Great Lakes</p>
-    		<p>Type: American IPA</p>
-    		<p>ABV: 5.1%</p>
-    		<p>IBU: 31</p>
-    		<p>Hops: Challenge, Cascade</p>
-    		<p>Grain: Marris Otter, Vienna, Crystal 120L</p>
--->
-    		
+     
+     <div class="beer open">
+      
+	 <div class="row beers-label-row">
+	    	<div class="ten columns offset by-one beers-label">
+	    		<img src="label_open.jpg">
+	    	</div><!-- /ten columns -->
+	    </div><!-- /beers-label-row -->
+	 
+	 <div class="row beers-info-row">
+    	<div class="ten columns offset by-one">
+    	    		
     		<table class="beers-info">
     			<!--
 <tr>
@@ -351,24 +364,22 @@
     	</div><!-- /four columns -->
     </div><!-- /row -->
     <div class="row"><div class="ten columns offset by-one"><hr class="thin-divider"></div></div>
+    </div><!-- /beer -->
     <!-- CLOSE SINGLE BEER INFO -->
     
     
          <!-- OPEN SINGLE BEER INFO -->
-    <div class="row beers-info-row">
-    	<div class="six columns offset by-one beers-label">
-    		<img src="label_open.jpg">
-    	</div><!-- /six columns -->
-    	<div class="four columns">
-<!--
-    		<p>Name: Great Lakes</p>
-    		<p>Type: American IPA</p>
-    		<p>ABV: 5.1%</p>
-    		<p>IBU: 31</p>
-    		<p>Hops: Challenge, Cascade</p>
-    		<p>Grain: Marris Otter, Vienna, Crystal 120L</p>
--->
-    		
+     <div class="beer open">
+	
+	 <div class="row beers-label-row">
+	    	<div class="ten columns offset by-one beers-label">
+	    		<img src="label_open.jpg">
+	    	</div><!-- /ten columns -->
+	    </div><!-- /beers-label-row -->
+	 
+	 <div class="row beers-info-row">
+    	<div class="ten columns offset by-one">
+    	    		
     		<table class="beers-info">
     			<!--
 <tr>
@@ -409,10 +420,34 @@
     				<td class="option-text">Open</td>
     			</tr>
     		</table>
-    	</div><!-- /four columns -->
+    	</div><!-- /ten columns -->
     </div><!-- /row -->
     <div class="row"><div class="ten columns offset by-one"><hr class="thin-divider"></div></div>
+    </div><!-- /beer -->
     <!-- CLOSE SINGLE BEER INFO -->
     
+    <script type="text/javascript">
+	/* Filtering */
+	
+	$(function(){
+	
+		$("#allcat").click(function(){
+		   $(".beer").slideDown();
+		   $("#beers-sorting-links a").removeClass("current");
+		   $(this).addClass("current");
+		   return false;
+		});
+		
+		$(".filter").click(function(){
+		    var thisFilter = $(this).attr("id");
+		    $(".beer").slideUp();
+		    $("."+ thisFilter).slideDown();
+		    $("#beers-sorting-links a").removeClass("current");
+		    $(this).addClass("current");
+		    return false;
+		});
+	});
+	</script>
+	
 </body>
 </html>
