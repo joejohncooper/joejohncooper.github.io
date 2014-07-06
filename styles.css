@@ -62,22 +62,35 @@ hr.thin-divider {
 /* HEADER */
 
 div.logo-area {
+/*
 	text-indent: -9999px;
 	background:url(bpb_logo.png);
 	background-size:contain;
+*/
 	width:6.667em; /* 200/30 */
 	height:6.667em; /* 200/30 */
 	overflow:hidden;
+	
 }
 
 div.logo-area:hover {
+/*
 	background:url(bpb_logo_option.png);
 	background-size:contain;
+*/
 	width:6.667em; /* 200/30 */
 	height:6.667em; /* 200/30 */
 }
 
+div.logo-area svg {
+	width:6.667em; /* 200/30 */
+	height:6.667em; /* 200/30 */
+	fill:#0d1013;
+}
 
+div.logo-area svg:hover {
+	fill:#1982ec;
+}
 
 
 
@@ -222,4 +235,16 @@ h1 {
 		font-size:1.00em;
 		line-height:1.65em;
 	}
+}
+
+/* POLYFILLS ETC. */
+
+.svg-logo-fallback { 
+  display: none;
+  /* Make sure it's the same size as the SVG takes up */
+  	width:6.667em; /* 200/30 */
+	height:6.667em; /* 200/30 */
+}
+.no-svg .fallback { 
+  background-image: url(bpb_logo.png); 
 }
