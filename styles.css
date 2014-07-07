@@ -125,6 +125,8 @@ nav ul li a {
 	text-decoration: none;
 }
 
+
+
 /* CONTENT */
 
 .offset-right {
@@ -135,6 +137,7 @@ h1 {
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	font-size:1em; /* 30/30 */
+	letter-spacing:0.070em;
 }
 
 .collaboration-table {
@@ -240,6 +243,26 @@ and (-webkit-min-device-pixel-ratio: 1.5) {
 		line-height:1.65em;
 	}
 }
+
+@media only screen
+and (max-width:768px) {
+	nav {
+		text-align:center;
+		
+	}
+	
+	nav ul {
+		position:relative;
+	}
+	
+	div.logo-area {
+		margin:0 auto 1em;
+	}
+}
+
+
+
+
 
 /* POLYFILLS ETC. */
 
