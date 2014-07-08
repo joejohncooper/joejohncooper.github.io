@@ -5,6 +5,7 @@
     <link rel='stylesheet' type='text/css' href='styles.css'>
     <link href='http://fonts.googleapis.com/css?family=Cardo:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="instafeed.min.js"></script>
     <script src="modernizr.js"></script>
     <meta name="google-site-verification" content="Su-djkU2g6dqVS-7CMtNqJIqSf1rb9yrAwW86-e4M-w" />
     <!-- Favicons -->
@@ -25,7 +26,14 @@
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<!-- Viewports -->
 	<meta name="viewport" content="initial-scale=1.0">
-	
+	    <script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        userId: 1420582547,
+        accessToken: '1420582547.467ede5.cb65ab9986804ae8a199f87a057aa303'
+    });
+    userFeed.run();
+</script>
 	
   </head>
 
@@ -61,6 +69,10 @@
     		<hr class="thick-divider"/>
     	</div><!-- /close twelve columns -->
     </div><!-- /close row -->
+    
+    
+
+
     
     
     <div class="row">
@@ -160,6 +172,25 @@
     		</ul>
     	</div><!-- /close twelve columns -->
     </div><!-- /close row -->
+    
+     <div class='row'>
+    	<div class="five columns offset by-one">
+    		<h1>Instagram</h1>
+    	</div><!-- /five columns offset by-one -->
+    </div><!-- /row -->
+    
+        <div class="row">
+    	<div class="ten columns offset by-one">
+    		<hr class="thick-divider"/>
+    	</div><!-- /close twelve columns -->
+    </div><!-- /close row -->
+
+    <div class="row">
+    	<div class="ten columns offset by-one guidelines">
+    		<div id="instafeed"></div>
+       	</div><!-- /close twelve columns -->
+    </div><!-- /close row -->
+
     
     
             
