@@ -28,7 +28,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 /* Global */
 
 body {
-	padding:1em;
+	padding:2.5em;
 }
 
 p {
@@ -42,7 +42,9 @@ p {
 -------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 480px) {
-
+p {
+	font-size:1.5em;
+}
 
 }
 
